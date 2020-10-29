@@ -62,7 +62,7 @@ All API calls must include the following two headers.
 2. [GET **geo_proxy_list**](#geo_proxy_list)
 3. [GET **carrier_proxy_list**](#carrier_proxy_list)
 4. [POST **buy_proxy/**](#buy_proxy/-(mobile))
-5. [POST **get_orders_status/**](#)
+5. [POST **get_orders_status/**](#get_orders_status/)
 6. [POST **order_details/**](#)
 7. [POST **extend_order/**](#)
 8. [POST **cancel_order/**](#)
