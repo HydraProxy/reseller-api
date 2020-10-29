@@ -58,23 +58,23 @@ All API calls must include the following two headers.
 ```
 ### API Endpoints
 
-1. GET [**get_account_info** ](#1-get_account_info)
-2. GET **geo_proxy_list**
-3. GET **carrier_proxy_list**
-4. POST **buy_proxy/**
-5. POST **get_orders_status/**
-6. POST **order_details/**
-7. POST **extend_order/**
-8. POST **cancel_order/**
-9. POST **update_whitelist_ip/**
-10. POST **change_protocol/**
-11. POST **update_rotation/**
-12. POST **update_proxy_geo/**
-13. POST **reset_proxy_pass/**
+1. [GET **get_account_info**](#get_account_info)
+2. [GET **geo_proxy_list**](#geo_proxy_list)
+3. [GET **carrier_proxy_list**](#carrier_proxy_list)
+4. [POST **buy_proxy/**](#buy_proxy/-(mobile))
+5. [POST **get_orders_status/**](#)
+6. [POST **order_details/**](#)
+7. [POST **extend_order/**](#)
+8. [POST **cancel_order/**](#)
+9. [POST **update_whitelist_ip/**](#)
+10. [POST **change_protocol/**](#)
+11. [POST **update_rotation/**](#)
+12. [POST **update_proxy_geo/**](#)
+13. [POST **reset_proxy_pass/**](#)
 
 ---
 
-## 1 get_account_info
+## get_account_info
 
 Returns the details of your reseller account
 
@@ -98,7 +98,7 @@ Returns the details of your reseller account
 ```
 
 
-## 2. **geo_proxy_list**
+## geo_proxy_list
 
 Returns the list of available mobile Ports (grouped by US state)
 
@@ -145,7 +145,7 @@ Returns the list of available mobile Ports (grouped by US state)
 ```
 
 
-## 3. **carrier_proxy_list**
+## carrier_proxy_list
 
 Returns the list of dedicated carriers (AT&T, T-Mobile and Verizon)
 
@@ -194,7 +194,7 @@ Returns the list of dedicated carriers (AT&T, T-Mobile and Verizon)
 ```
 
 
-## 4.1 **buy_proxy/** - MOBILE
+## buy_proxy/ (MOBILE)
 
 Endpoint used for placing orders for mobile proxies.
 
@@ -259,7 +259,7 @@ VALUES ARE ACCEPTED ONLY IN CAPITAL LETTERS, UNLESS INDICATED OTHERWISE.
 }
 ```
 
-## 4.1 **buy_proxy/** - RESIDENTIAL
+## buy_proxy/ (RESIDENTIAL)
 
 Endpoint used for placing orders for residential proxies.
 
@@ -308,7 +308,7 @@ VALUES ARE ACCEPTED ONLY IN CAPITAL LETTERS, UNLESS INDICATED OTHERWISE.
 }
 ```
 
-## 5. **get_orders_status/**
+## get_orders_status/
 
 Get a list with all your orders filtered by status.
 
@@ -337,7 +337,7 @@ Get a list with all your orders filtered by status.
 ]
 ```
 
-## 6. **order_details/**
+## order_details/
 
 Get details for a particular order
 
@@ -414,7 +414,7 @@ Get details for a particular order
 ```
 
 
-## 7. **extend_order/**
+## extend_order/
 
 Extend an order to continue using the access details provided.
 
@@ -457,7 +457,7 @@ Extend an order to continue using the access details provided.
 }
 ```
 
-## 8. **update_whitelist_ip/**
+## update_whitelist_ip/
 
 For mobile proxies only. Change the whitelisted IP address of the proxy user. 
 
@@ -487,7 +487,7 @@ Can be changed at minimum 30 minutes intervals.
 }
 ```
 
-## 9. **change_protocol/**
+## change_protocol/
 
 Available only ONCE per order and ONLY for mobile proxy orders. 
 
@@ -516,7 +516,7 @@ Change the protocol of your mobile proxy from HTTPS to SOCKS5 or vice versa.
 }
 ```
 
-## 10. **update_rotation/**
+## update_rotation/
 
 Change the proxy rotaiton of your mobile proxy from 30 minutes rotation to extended or vice versa.
 
@@ -557,7 +557,7 @@ Change the proxy rotaiton of your mobile proxy from 30 minutes rotation to exten
 }
 ```
 
-## 11. **update_proxy_geo/**
+## update_proxy_geo/
 
 Change the proxy geo (US State) of your mobile proxies.
 
@@ -589,7 +589,7 @@ Change the proxy geo (US State) of your mobile proxies.
 }
 ```
 
-## 12. **reset_proxy_pass/**
+## reset_proxy_pass/
 
 For residential proxies only. Change the authorization password used by the user to access the proxy network.
 
@@ -619,7 +619,7 @@ For residential proxies only. Change the authorization password used by the user
 }
 ```
 
-## 13. **cancel_order/**
+## cancel_order/
 
 Cancel an order.
 
