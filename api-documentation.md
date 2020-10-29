@@ -1,6 +1,8 @@
 # HydraProxy API Documentation v1.0
 
-###Account General Info
+[Go to Real Cool Heading section](#required-headers)
+
+### Account General Info
 
 - This API is available only for reseller accounts (for any business that wants to resell access to our networks).
 - Reseller accounts are created manually. Please contact us at api@hydraproxy.com or visit our website at hydraproxy.com and reach us via our webchat.
