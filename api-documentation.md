@@ -13,7 +13,7 @@
 ### Account General Info
 
 - This API is available only for reseller accounts (for any business that wants to resell access to our networks).
-- Reseller accounts are created manually. Please contact us at api@hydraproxy.com or visit our website at hydraproxy.com and reach us via our webchat.
+- Reseller accounts are created manually. Please contact us at api@hydraproxy.com or visit our website at [hydraproxy.com](https://hydraproxy.com/) and reach us via our webchat.
 - You need an API Authorization Token to access the API endpoints. It will be provided once your account is created.
 - Funds are deposited manually, upon requests. Accepted payment methods: Cards (via Stripe) and Cryptocurrencies. Minimum deposit for reseller accounts is $100.
 
