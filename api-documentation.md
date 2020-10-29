@@ -1,6 +1,14 @@
 # HydraProxy API Documentation v1.0
 
-[Go to Real Cool Heading section](#required-headers)
+### Table Of Contents
+- [Account General Info](#account-general-info)
+- [Product General Info](#product-general-info)
+- [API General Usage Info](#api-general-usage-info)
+- [Required Headers](#required-headers)
+- [API Endpoints](#api-endpoints)
+
+
+---
 
 ### Account General Info
 
@@ -38,7 +46,7 @@
 }
 ```
 
-# API Endpoints - How to use the API
+# How to use the API
 
 ### Required Headers
 
@@ -48,6 +56,7 @@ All API calls must include the following two headers.
 'Accept: application/json'
 'Authorization: Token extended_api_token_strong'
 ```
+### API Endpoints
 
 1. GET **get_account_info** 
 2. GET **geo_proxy_list**
