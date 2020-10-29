@@ -58,7 +58,7 @@ All API calls must include the following two headers.
 ```
 ### API Endpoints
 
-1. GET **get_account_info** 
+1. GET [**get_account_info** ](#1-get_account_info)
 2. GET **geo_proxy_list**
 3. GET **carrier_proxy_list**
 4. POST **buy_proxy/**
@@ -74,7 +74,7 @@ All API calls must include the following two headers.
 
 ---
 
-## 1. **get_account_info**
+## 1 get_account_info
 
 Returns the details of your reseller account
 
