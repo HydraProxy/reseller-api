@@ -30,7 +30,7 @@
 - All requests must be sent via HTTPS
 - API Key is included in the **Authorization** header with the format `Token api_token_strong`
 - **GET** or **POST** method must be specified. URLs for **POST** methods must end with a forward slash **/**
-- The API recognizes requests sent only from whitelisted IP addresses (you must provide maximum two IP addresses from where the API will be called).
+- The API recognizes requests sent only from whitelisted IP addresses (you can provide a maximum of two IP addresses from where the API will be called).
 - Whitelisting an IP address is done manually. You can request a change at any time.
 - All dates/hours/timestamps are in UTC time.
 - API responses are in json format
