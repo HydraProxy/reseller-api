@@ -30,7 +30,7 @@
 - All requests must be sent via HTTPS
 - API Key is included in the **Authorization** header with the format `Token api_token_strong`
 - **GET** or **POST** method must be specified. URLs for **POST** methods must end with a forward slash **/**
-- The API recognizes requests sent only from whitelisted IP addresses (you must provide the IP address of the machine from where the API will be called).
+- The API recognizes requests sent only from whitelisted IP addresses (you must provide maximum two IP addresses from where the API will be called).
 - Whitelisting an IP address is done manually. You can request a change at any time.
 - All dates/hours/timestamps are in UTC time.
 - API responses are in json format
@@ -71,6 +71,7 @@ All API calls must include the following two headers.
 11. [POST **update_rotation/**](#update_rotation)
 12. [POST **update_proxy_geo/**](#update_proxy_geo)
 13. [POST **reset_proxy_pass/**](#reset_proxy_pass)
+14. [POST **view_usage_history/**](#view_usage_history)
 
 ---
 
@@ -457,6 +458,39 @@ Extend an order to continue using the access details provided.
 }
 ```
 
+## cancel_order/
+
+Cancel an order.
+
+**NOTE**
+- Only 30-31 days mobile proxy orders can be canceled and only in the first 24 hours.
+- Canceled residential proxies will return the remaining bandwidth and not the already used data.
+
+
+**POST** https://api.hydraproxy.com/cancel_order/
+
+*Headers*
+```
+'Accept: application/json'
+'Authorization: Token extended_api_token_strong'
+```
+*Accepted key:value Data*
+
+| Key (low caps)  | Value Type (CAPS or digits)   | Options     | Description  |
+| -------         | -------           | ---------------------   | -----------  |
+| request_id      | unique_digits     | 1000 to 100000000000    | Unique ID created from digits. It can be anything, preferably a timestamp.             |
+| order_id        | digits            | 1 to XX | Insert the ID of the order for which you want to retrieve the details. |
+
+**Response**
+```
+{
+    "status": "OK",
+    "order_id": 2,
+    "cancel_confirmation": "YES",
+    "refund_credited_usd": 6.0
+}
+```
+
 ## update_whitelist_ip/
 
 For mobile proxies only. Change the whitelisted IP address of the proxy user. 
@@ -619,16 +653,14 @@ For residential proxies only. Change the authorization password used by the user
 }
 ```
 
-## cancel_order/
+## view_usage_history/
 
-Cancel an order.
+For residential proxies only. Retrieve the historical bandwidth usage in MB per day with a 1 to 2% tolerance.
 
-**NOTE**
-- Only 30-31 days mobile proxy orders can be canceled and only in the first 24 hours.
-- Canceled residential proxies will return the remaining bandwidth and not the already used data.
+**NOTE**: For current day usage history there is a delay in displaying the exact usage. Final usage for the day can be retrived at the end of day (UTC time).
 
 
-**POST** https://api.hydraproxy.com/cancel_order/
+**POST** https://api.hydraproxy.com/view_usage_history/
 
 *Headers*
 ```
@@ -639,15 +671,35 @@ Cancel an order.
 
 | Key (low caps)  | Value Type (CAPS or digits)   | Options     | Description  |
 | -------         | -------           | ---------------------   | -----------  |
-| request_id      | unique_digits     | 1000 to 100000000000    | Unique ID created from digits. It can be anything, preferably a timestamp.             |
 | order_id        | digits            | 1 to XX | Insert the ID of the order for which you want to retrieve the details. |
 
-**Response**
+**Response for unused bandwidth**
 ```
 {
     "status": "OK",
-    "order_id": 2,
-    "cancel_confirmation": "YES",
-    "refund_credited_usd": 6.0
+    "order_id": 22,
+    "bandwidth_history": null
+}
+```
+
+**Response for used bandwidth**
+```
+{
+    "status": "OK",
+    "order_id": 90,
+    "bandwidth_history": {
+        "2020-11-06 00:00:00": {
+            "bandwidth_upload_mb": 75.16,
+            "bandwidth_download_mb": 702.76
+        },
+        "2020-10-30 00:00:00": {
+            "bandwidth_upload_mb": 17.08,
+            "bandwidth_download_mb": 191.12
+        },
+        "2020-10-28 00:00:00": {
+            "bandwidth_upload_mb": 20.94,
+            "bandwidth_download_mb": 238.54
+        }
+    }
 }
 ```
