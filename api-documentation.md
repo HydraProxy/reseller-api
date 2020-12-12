@@ -36,6 +36,7 @@
 - API responses are in json format
 - The first item of the response is the request status ("OK" or "ERROR").
 - "ERROR" responses return as second item the url of the endpoint.
+- All POST digit parameters must be sent as **strings of digits** (NOT integers).
 
 **ERROR Response Example**
 
@@ -552,7 +553,7 @@ Change the protocol of your mobile proxy from HTTPS to SOCKS5 or vice versa.
 
 ## update_rotation/
 
-Change the proxy rotaiton of your mobile proxy from 30 minutes rotation to extended or vice versa.
+Change the proxy rotation of your mobile proxy from 30 minutes rotation to extended or vice versa.
 
 **NOTE**
 - TRUE for 30 minutes force rotation
