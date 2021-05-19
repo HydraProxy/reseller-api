@@ -658,8 +658,9 @@ For residential proxies only. Change the authorization password used by the user
 
 For residential proxies only. Retrieve the historical bandwidth usage in MB per day with a 1 to 2% tolerance.
 
-**NOTE**: For current day usage history there is a delay in displaying the exact usage. Final usage for the day can be retrived at the end of day (UTC time).
+**NOTE 1**: For current day usage history there is a delay in displaying the exact usage. Final usage for the day can be retrived at the end of day (UTC time).
 
+**NOTE 2**: The History usage won’t be available for all the data set. An order's old history gets deleted to avoid large API responses, so you'll probably need to save it in the database.
 
 **POST** https://api.hydraproxy.com/view_usage_history/
 
