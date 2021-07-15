@@ -465,6 +465,7 @@ Cancel an order.
 
 **NOTE**
 - Only 30-31 days mobile proxy orders can be canceled and only in the first 24 hours.
+- Order extensions for mobile proxies are not refunded when orders are canceled.
 - Canceled residential proxies will return the remaining bandwidth and not the already used data.
 
 
