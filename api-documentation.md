@@ -104,7 +104,7 @@ Returns the details of your reseller account
 
 Returns the list of available mobile Ports (grouped by US state)
 
-**GET** https://api.hydraproxy.com/geo_proxy_list
+**GET** ```https://api.hydraproxy.com/geo_proxy_list```
 
 *Headers*
 ```
@@ -151,7 +151,7 @@ Returns the list of available mobile Ports (grouped by US state)
 
 Returns the list of dedicated carriers (AT&T, T-Mobile and Verizon)
 
-**GET** https://api.hydraproxy.com/carrier_proxy_list
+**GET** ```https://api.hydraproxy.com/carrier_proxy_list```
 
 *Headers*
 ```
@@ -204,7 +204,7 @@ Supports only POST requests and data sent as --form, payload {}
 
 VALUES ARE ACCEPTED ONLY IN CAPITAL LETTERS, UNLESS INDICATED OTHERWISE.
 
-**POST** https://api.hydraproxy.com/buy_proxy/
+**POST** ```https://api.hydraproxy.com/buy_proxy/```
 
 *Headers*
 ```
@@ -269,7 +269,7 @@ Supports only POST requests and data sent as --form, payload {}
 
 VALUES ARE ACCEPTED ONLY IN CAPITAL LETTERS, UNLESS INDICATED OTHERWISE.
 
-**POST** https://api.hydraproxy.com/buy_proxy/
+**POST** ```https://api.hydraproxy.com/buy_proxy/```
 
 *Headers*
 ```
@@ -314,7 +314,7 @@ VALUES ARE ACCEPTED ONLY IN CAPITAL LETTERS, UNLESS INDICATED OTHERWISE.
 
 Get a list with all your orders filtered by status.
 
-**POST** https://api.hydraproxy.com/get_orders_status/
+**POST** ```https://api.hydraproxy.com/get_orders_status/```
 
 *Headers*
 ```
@@ -343,7 +343,7 @@ Get a list with all your orders filtered by status.
 
 Get details for a particular order
 
-**POST** https://api.hydraproxy.com/order_details/
+**POST** ```https://api.hydraproxy.com/order_details/```
 
 *Headers*
 ```
@@ -420,7 +420,7 @@ Get details for a particular order
 
 Extend an order to continue using the access details provided.
 
-**POST** https://api.hydraproxy.com/extend_order/
+**POST** ```https://api.hydraproxy.com/extend_order/```
 
 *Headers*
 ```
@@ -469,7 +469,7 @@ Cancel an order.
 - Canceled residential proxies will return the remaining bandwidth and not the already used data.
 
 
-**POST** https://api.hydraproxy.com/cancel_order/
+**POST** ```https://api.hydraproxy.com/cancel_order/```
 
 *Headers*
 ```
@@ -499,7 +499,7 @@ For mobile proxies only. Change the whitelisted IP address of the proxy user.
 
 Can be changed at minimum 30 minutes intervals.
 
-**POST** https://api.hydraproxy.com/update_whitelist_ip/
+**POST** ```https://api.hydraproxy.com/update_whitelist_ip/```
 
 *Headers*
 ```
@@ -529,7 +529,7 @@ Available only ONCE per order and ONLY for mobile proxy orders.
 
 Change the protocol of your mobile proxy from HTTPS to SOCKS5 or vice versa.
 
-**POST** https://api.hydraproxy.com/change_protocol/
+**POST** ```https://api.hydraproxy.com/change_protocol/```
 
 *Headers*
 ```
@@ -560,7 +560,7 @@ Change the proxy rotation of your mobile proxy from 30 minutes rotation to exten
 - TRUE for 30 minutes force rotation
 - FALSE for extended IP rotation (up to 6 hours). Your proxy will change IP only when the current gateway mobile IP is no longer online.
 
-**POST** https://api.hydraproxy.com/update_rotation/
+**POST** ```https://api.hydraproxy.com/update_rotation/```
 
 *Headers*
 ```
@@ -602,7 +602,7 @@ Change the proxy geo (US State) of your mobile proxies.
 - Use the geo_code for your preferred state. You can get a list of all available
 - A proxy with RANDOM geo_code proxies can change the state and get IPs from a particular state, but a proxy with a particular geo_code (eg FL or CA) can't be reversed back to 
 
-**POST** https://api.hydraproxy.com/update_proxy_geo/
+**POST** ```https://api.hydraproxy.com/update_proxy_geo/```
 
 *Headers*
 ```
@@ -630,7 +630,7 @@ Change the proxy geo (US State) of your mobile proxies.
 For residential proxies only. Change the authorization password used by the user to access the proxy network.
 
 
-**POST** https://api.hydraproxy.com/reset_proxy_pass/
+**POST** ```https://api.hydraproxy.com/reset_proxy_pass/```
 
 *Headers*
 ```
@@ -663,7 +663,7 @@ For residential proxies only. Retrieve the historical bandwidth usage in MB per 
 
 **NOTE 2**: The History usage won’t be available for all the data set. An order's old history gets deleted to avoid large API responses, so you'll probably need to save it in the database.
 
-**POST** https://api.hydraproxy.com/view_usage_history/
+**POST** ```https://api.hydraproxy.com/view_usage_history/```
 
 *Headers*
 ```
