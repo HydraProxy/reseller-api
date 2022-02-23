@@ -80,7 +80,7 @@ All API calls must include the following two headers.
 
 Returns the details of your reseller account
 
-**GET** https://api.hydraproxy.com/get_account_info
+**GET** ```https://api.hydraproxy.com/get_account_info```
 
 *Headers*
 ```
