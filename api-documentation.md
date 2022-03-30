@@ -28,7 +28,7 @@
 ### API General Usage Info
 
 - All requests must be sent via HTTPS
-- API Key is included in the **Authorization** header with the format `Token api_token_strong`
+- API Key is included in the **Authorization** header with the format `Token api_token_string`
 - **GET** or **POST** method must be specified. URLs for **POST** methods must end with a forward slash **/**
 - The API recognizes requests sent only from whitelisted IP addresses (you can provide a maximum of two IP addresses from where the API will be called).
 - Whitelisting an IP address is done manually. You can request a change at any time.
@@ -55,7 +55,7 @@ All API calls must include the following two headers.
 
 ```
 'Accept: application/json'
-'Authorization: Token extended_api_token_strong'
+'Authorization: Token extended_api_token_string'
 ```
 ### API Endpoints
 
@@ -85,7 +85,7 @@ Returns the details of your reseller account
 *Headers*
 ```
 'Accept: application/json'
-'Authorization: Token extended_api_token_strong'
+'Authorization: Token extended_api_token_string'
 ```
 
 **Response**
@@ -109,7 +109,7 @@ Returns the list of available mobile Ports (grouped by US state)
 *Headers*
 ```
 'Accept: application/json'
-'Authorization: Token extended_api_token_strong'
+'Authorization: Token extended_api_token_string'
 ```
 **Response**
 
@@ -156,7 +156,7 @@ Returns the list of dedicated carriers (AT&T, T-Mobile and Verizon)
 *Headers*
 ```
 'Accept: application/json'
-'Authorization: Token extended_api_token_strong'
+'Authorization: Token extended_api_token_string'
 ```
 **Response**
 
@@ -209,7 +209,7 @@ VALUES ARE ACCEPTED ONLY IN CAPITAL LETTERS, UNLESS INDICATED OTHERWISE.
 *Headers*
 ```
 'Accept: application/json'
-'Authorization: Token extended_api_token_strong'
+'Authorization: Token extended_api_token_string'
 ```
 *Accepted key:value Data*
 
@@ -274,7 +274,7 @@ VALUES ARE ACCEPTED ONLY IN CAPITAL LETTERS, UNLESS INDICATED OTHERWISE.
 *Headers*
 ```
 'Accept: application/json'
-'Authorization: Token extended_api_token_strong'
+'Authorization: Token extended_api_token_string'
 ```
 *Accepted key:value Data*
 
@@ -319,7 +319,7 @@ Get a list with all your orders filtered by status.
 *Headers*
 ```
 'Accept: application/json'
-'Authorization: Token extended_api_token_strong'
+'Authorization: Token extended_api_token_string'
 ```
 *Accepted key:value Data*
 
@@ -348,7 +348,7 @@ Get details for a particular order
 *Headers*
 ```
 'Accept: application/json'
-'Authorization: Token extended_api_token_strong'
+'Authorization: Token extended_api_token_string'
 ```
 *Accepted key:value Data*
 
@@ -425,7 +425,7 @@ Extend an order to continue using the access details provided.
 *Headers*
 ```
 'Accept: application/json'
-'Authorization: Token extended_api_token_strong'
+'Authorization: Token extended_api_token_string'
 ```
 *Accepted key:value Data*
 
@@ -474,7 +474,7 @@ Cancel an order.
 *Headers*
 ```
 'Accept: application/json'
-'Authorization: Token extended_api_token_strong'
+'Authorization: Token extended_api_token_string'
 ```
 *Accepted key:value Data*
 
@@ -504,7 +504,7 @@ Can be changed at minimum 30 minutes intervals.
 *Headers*
 ```
 'Accept: application/json'
-'Authorization: Token extended_api_token_strong'
+'Authorization: Token extended_api_token_string'
 ```
 *Accepted key:value Data*
 
@@ -534,7 +534,7 @@ Change the protocol of your mobile proxy from HTTPS to SOCKS5 or vice versa.
 *Headers*
 ```
 'Accept: application/json'
-'Authorization: Token extended_api_token_strong'
+'Authorization: Token extended_api_token_string'
 ```
 *Accepted key:value Data*
 
@@ -565,7 +565,7 @@ Change the proxy rotation of your mobile proxy from 30 minutes rotation to exten
 *Headers*
 ```
 'Accept: application/json'
-'Authorization: Token extended_api_token_strong'
+'Authorization: Token extended_api_token_string'
 ```
 *Accepted key:value Data*
 
@@ -607,7 +607,7 @@ Change the proxy geo (US State) of your mobile proxies.
 *Headers*
 ```
 'Accept: application/json'
-'Authorization: Token extended_api_token_strong'
+'Authorization: Token extended_api_token_string'
 ```
 *Accepted key:value Data*
 
@@ -635,7 +635,7 @@ For residential proxies only. Change the authorization password used by the user
 *Headers*
 ```
 'Accept: application/json'
-'Authorization: Token extended_api_token_strong'
+'Authorization: Token extended_api_token_string'
 ```
 *Accepted key:value Data*
 
@@ -668,7 +668,7 @@ For residential proxies only. Retrieve the historical bandwidth usage in MB per 
 *Headers*
 ```
 'Accept: application/json'
-'Authorization: Token extended_api_token_strong'
+'Authorization: Token extended_api_token_string'
 ```
 *Accepted key:value Data*
 
