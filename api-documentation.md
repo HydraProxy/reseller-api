@@ -578,7 +578,7 @@ Change the proxy rotation of your mobile proxy from 30 minutes rotation to exten
 | Key (low caps)  | Value Type (CAPS or digits)   | Options     | Description  |
 | -------         | -------           | ---------------------   | -----------  |
 | order_id        | digits            | 1 to XX | Insert the ID of the order for which you want to retrieve the details. |
-| ip_rotation     | defined_bool      | TRUE, FALSE  | TRUE = 30 min IP rotation. FALSE = extended rotation of up to 6 hours. |
+| ip_rotation     | defined_bool      | 5, 10, 30, TRUE, FALSE  | TRUE = 30 min IP rotation. FALSE = extended rotation of up to 6 hours. [NOTE: Premium orders can select shorter rotations as 5min and 30min.] |
 
 **Response for FALSE (extended rotation)**
 ```
