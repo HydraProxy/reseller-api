@@ -225,10 +225,13 @@ VALUES ARE ACCEPTED ONLY IN CAPITAL LETTERS, UNLESS INDICATED OTHERWISE.
 | ip_rotation     | defined_bool      | TRUE, FALSE                           | TRUE = 30 min IP rotation. FALSE = extended rotation of up to 6 hours.             |
 | geo_code        | defined_string*    | RANDOM or US State Code               | RANDOM for US-wide rotation (in all states) or choose a particular US state. The list of available US mobile proxies by state can be retrived by calling the "/geo_proxy_list" endpoint. **Use the geo_code form of 2 letters in your request.**|
 | carrier         | defined_string*    | RANDOM or ATT, TMOBILE, VERIZON       | RANDOM for IPs from all US carriers. (Optional) you can select a carrier and all your IPs will be from this carrier. You can get a list of dedicated carriers by calling the "/carrier_proxy_list" endpoint |
+| rotation_premium | defined_string | 5, 10, TRUE, FALSE | [OPTIONAL] This parameter triggers short rotation times and premium order placement (at a cost - please ask support for it) selection of 5min, 10min or standard 30min and extended. |
 
 **NOTE**
 - You must use all the above data keys when placing an order
-- You can select a particular geo_code or carrier but noth both. If you select a geo_code (eg. California), you can't select a dedicated carrier.
+- You can select both a particular geo_code and a carrier.
+- Once order is active, you can change your order's location at every 30min.
+- Carriers can't be changed after order placement.
 
 **Response**
 ```
@@ -247,12 +250,15 @@ VALUES ARE ACCEPTED ONLY IN CAPITAL LETTERS, UNLESS INDICATED OTHERWISE.
     },
     "proxy_info": {
         "protocol": "HTTPS",
-        "ip_rotation": "TRUE",
         "whitelist_ip": "123.45.67.89",
         "geo_code": "RANDOM",
         "carrier": "RANDOM",
         "lock_ip_timeout": "2020-10-29 12:05:12",
-        "lock_geo_timeout": "2020-10-29 12:05:12"
+        "lock_geo_timeout": "2020-10-29 12:05:12",
+        "ip_rotation": "TRUE",
+        "ip_rotation_time": "5",
+        "premium": TRUE
+        
     },
     "proxy": {
         "host": "4g.hydraproxy.com",
