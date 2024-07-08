@@ -225,12 +225,12 @@ VALUES ARE ACCEPTED ONLY IN CAPITAL LETTERS, UNLESS INDICATED OTHERWISE.
 | ip_rotation     | defined_bool      | TRUE, FALSE                           | TRUE = 30 min IP rotation. FALSE = extended rotation of up to 6 hours.             |
 | geo_code        | defined_string*    | RANDOM or US State Code               | RANDOM for US-wide rotation (in all states) or choose a particular US state. The list of available US mobile proxies by state can be retrived by calling the "/geo_proxy_list" endpoint. **Use the geo_code form of 2 letters in your request.**|
 | carrier         | defined_string*    | RANDOM or ATT, TMOBILE, VERIZON       | RANDOM for IPs from all US carriers. (Optional) you can select a carrier and all your IPs will be from this carrier. You can get a list of dedicated carriers by calling the "/carrier_proxy_list" endpoint |
-| rotation_premium | defined_string | 5, 10, TRUE, FALSE | [OPTIONAL] This parameter triggers short rotation times and premium order placement (at a cost - please ask support for it) selection of 5min, 10min or standard 30min and extended. |
+| rotation_premium | defined_string | TRUE, FALSE | [OPTIONAL] This parameter triggers short rotation times and premium order placement (at a cost - please ask support for it) selection of 5min, 10min or standard 30min and extended. By default premium orders get activated with 5min rotation - which you can change immediately after order activation. |
 
 **NOTE**
 - You must use all the above data keys when placing an order
 - You can select both a particular geo_code and a carrier.
-- Once order is active, you can change your order's location at every 30min.
+- Once an order is active, you can change your order's location at every 30min.
 - Carriers can't be changed after order placement.
 
 **Response**
